@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:XF_Nodejs.CustumViewCell"
+             mc:Ignorable="d"
+             x:Class="XF_Nodejs.MainPage">
+    <ContentPage.Resources>
+        <local:ChatDataTemplate x:Key="ChatDataTemplate"></local:ChatDataTemplate>
+    </ContentPage.Resources>
+    <StackLayout>
+        <ListView ItemsSource="{Binding LstMessenger}"
+                  ItemTemplate="{StaticResource ChatDataTemplate}"
+                  />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Entry Text="{Binding NameSend}"/>
+            <Button Text="Lock Name"
+                    Grid.Column="1"
+                    Command="{Binding LockName}"/>
+
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Entry Text="{Binding MessengerSend}"
+               />
+            <Button Text="Send" 
+                    Grid.Column="1"
+                    Command="{Binding SendMessenger}"/>
+
+        </Grid>
+      
+    </StackLayout>
+
+</ContentPage>

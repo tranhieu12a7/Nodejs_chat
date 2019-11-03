@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XF_Nodejs.CustumViewCell.OutputTextViewCell">
+    <ViewCell.View>
+        <Frame HorizontalOptions="EndAndExpand"
+            Padding="10" CornerRadius="10">
+            <StackLayout Orientation="Horizontal"
+                         Padding="0">
+                <Label Text="{Binding Messenger}"/>
+                <Label Text="{Binding Name,StringFormat=':{0}'}"/>
+            </StackLayout>
+        </Frame>
+    </ViewCell.View>
+</ViewCell>
