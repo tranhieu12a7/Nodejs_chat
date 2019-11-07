@@ -61,6 +61,7 @@ namespace XF_Nodejs.ViewModels
                             item.isInputChat = true;
                         }
                         LstMessenger.Add(item);
+                        MainPage.GoScrollTo.Invoke(item, new EventArgs());
                     }
                 }
                 catch (Exception ex)

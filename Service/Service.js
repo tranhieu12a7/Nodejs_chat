@@ -16,6 +16,7 @@ io.on('connection', function(socket){
         //check string nhan duoc co phai la chuoi json khong
         if(isJSON(data)==true)
         {
+            console.log(data);
             var dataObj=JSON.parse(data);
             MongoClient.connect(url, function(err, db) {
                         if (err) throw err;
@@ -26,7 +27,7 @@ io.on('connection', function(socket){
                             console.log("1 document inserted");
                             db.close();
                         });
-                        var mysort = { name: -1 };
+                        var mysort = { createDate: -1 };
                         dbo.collection("DBMessenger").find().limit(1).sort(mysort).toArray(function(err,resuilt){
                             if (err) throw err;
                             var dataMess=JSON.stringify(resuilt);

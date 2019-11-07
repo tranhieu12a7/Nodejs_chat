@@ -12,6 +12,7 @@
     <StackLayout>
         <ListView ItemsSource="{Binding LstMessenger}"
                   ItemTemplate="{StaticResource ChatDataTemplate}"
+                  x:Name="LstViewChat"
                   />
         <Grid>
             <Grid.ColumnDefinitions>
