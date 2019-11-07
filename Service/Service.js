@@ -6,6 +6,8 @@ var io = require("socket.io")(http);
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
+// var connectDATA= require("./Config/ConnectDBMongo.js");
+// connectDATA();
 
 io.on('connection', function(socket){
     console.log('a user connected');
